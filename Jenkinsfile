@@ -32,12 +32,16 @@ pipeline{
                     }
                 }
                 stage('safari'){
-                    sh 'sleep 5s'
-                     sh 'echo "Corriendo pruebas en Safari"'
+                    steps{
+                        sh 'sleep 5s'
+                        sh 'echo "Corriendo pruebas en Safari"'
+                    }
                 }
                 stage('edge'){
-                    sh 'sleep 5s'
-                    sh 'echo "Corriendo pruebas en Edge"'
+                    steps{
+                        sh 'sleep 5s'
+                        sh 'echo "Corriendo pruebas en Edge"'
+                    }
                 }
             }    
         }
